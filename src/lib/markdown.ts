@@ -19,7 +19,7 @@ export const md = new MarkdownIt({
             codeContent = md.utils.escapeHtml(str);
         }
 
-        const dots = '<div style="display: flex; gap: 6px; margin-bottom: 12px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56;"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f;"></span></div>';
+        const dots = '<div style="margin-bottom: 12px; white-space: nowrap;"><span style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #ff5f56; margin-right: 6px;"></span><span style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e; margin-right: 6px;"></span><span style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #27c93f;"></span></div>';
 
         return `<pre>${dots}<code class="hljs">${codeContent}</code></pre>`;
     }
@@ -32,7 +32,7 @@ export function preprocessMarkdown(content: string) {
     content = content.replace(/^[ ]{0,3}(_[ ]*_[ ]*_[_ ]*)[ \t]*$/gm, '___');
     content = content.replace(/\*\*\s+\*\*/g, ' ');
     content = content.replace(/\*{4,}/g, '');
-    content = content.replace(/\*\*([）」』》〉】〕〗］｝"'。，、；：？！])/g, '**\u200B$1');
+    content = content.replace(/\*\*([）」』》〉】〕〗］｝"'。，、；？！])/g, '**\u200B$1');
     content = content.replace(/([（「『《〈【〔〖［｛"'])\*\*/g, '$1\u200B**');
     return content;
 }
@@ -52,6 +52,61 @@ export function applyTheme(html: string, themeId: string) {
         code: 'color: inherit !important; background-color: transparent !important; border: none !important; padding: 0 !important;',
     };
 
+
+    const getSingleImageNode = (p: HTMLParagraphElement): HTMLElement | null => {
+        const children = Array.from(p.childNodes).filter(n =>
+            !(n.nodeType === Node.TEXT_NODE && !(n.textContent || '').trim()) &&
+            !(n.nodeType === Node.ELEMENT_NODE && (n as Element).tagName === 'BR')
+        );
+        if (children.length !== 1) return null;
+        const onlyChild = children[0];
+        if (onlyChild.nodeName === 'IMG') return onlyChild as HTMLElement;
+        if (onlyChild.nodeName === 'A' && onlyChild.childNodes.length === 1 && onlyChild.childNodes[0].nodeName === 'IMG') {
+            return onlyChild as HTMLElement;
+        }
+        return null;
+    };
+
+    // Merge consecutive single-image paragraphs (same parent) into pair-wise side-by-side grids.
+    const paragraphSnapshot = Array.from(doc.querySelectorAll('p'));
+    for (const paragraph of paragraphSnapshot) {
+        if (!paragraph.isConnected) continue;
+        const parent = paragraph.parentElement;
+        if (!parent) continue;
+        if (!getSingleImageNode(paragraph)) continue;
+
+        const run: HTMLParagraphElement[] = [paragraph];
+        let cursor = paragraph.nextElementSibling;
+        while (cursor && cursor.tagName === 'P') {
+            const p = cursor as HTMLParagraphElement;
+            if (!getSingleImageNode(p)) break;
+            run.push(p);
+            cursor = p.nextElementSibling;
+        }
+
+        if (run.length < 2) continue;
+
+        // Pair images two by two, leaving an odd tail image as-is.
+        for (let i = 0; i + 1 < run.length; i += 2) {
+            const first = run[i];
+            const second = run[i + 1];
+            if (!first.isConnected || !second.isConnected) continue;
+
+            const firstImageNode = getSingleImageNode(first);
+            const secondImageNode = getSingleImageNode(second);
+            if (!firstImageNode || !secondImageNode) continue;
+
+            const gridParagraph = doc.createElement('p');
+            gridParagraph.classList.add('image-grid');
+            gridParagraph.setAttribute('style', 'display: flex; justify-content: center; gap: 8px; margin: 24px 0; align-items: flex-start;');
+            gridParagraph.appendChild(firstImageNode);
+            gridParagraph.appendChild(secondImageNode);
+
+            first.before(gridParagraph);
+            first.remove();
+            second.remove();
+        }
+    }
 
     // Process image grids
     const paragraphs = doc.querySelectorAll('p');
@@ -81,6 +136,24 @@ export function applyTheme(html: string, themeId: string) {
             const currentStyle = el.getAttribute('style') || '';
             el.setAttribute('style', currentStyle + '; ' + style[selector as keyof typeof style]);
         });
+    });
+
+    // Tailwind preflight removes native list markers. Restore explicit markers.
+    doc.querySelectorAll('ul').forEach(ul => {
+        const currentStyle = ul.getAttribute('style') || '';
+        ul.setAttribute('style', `${currentStyle}; list-style-type: disc !important; list-style-position: outside;`);
+    });
+    doc.querySelectorAll('ul ul').forEach(ul => {
+        const currentStyle = ul.getAttribute('style') || '';
+        ul.setAttribute('style', `${currentStyle}; list-style-type: circle !important;`);
+    });
+    doc.querySelectorAll('ul ul ul').forEach(ul => {
+        const currentStyle = ul.getAttribute('style') || '';
+        ul.setAttribute('style', `${currentStyle}; list-style-type: square !important;`);
+    });
+    doc.querySelectorAll('ol').forEach(ol => {
+        const currentStyle = ol.getAttribute('style') || '';
+        ol.setAttribute('style', `${currentStyle}; list-style-type: decimal !important; list-style-position: outside;`);
     });
 
     const hljsLight: Record<string, string> = {
@@ -124,6 +197,16 @@ export function applyTheme(html: string, themeId: string) {
                 node.setAttribute('style', `${node.getAttribute('style') || ''}; ${override}`);
             });
         });
+    });
+
+    // Unify image look-and-feel across themes.
+    doc.querySelectorAll('img').forEach(img => {
+        const inGrid = Boolean(img.closest('.image-grid'));
+        const currentStyle = img.getAttribute('style') || '';
+        const appendedStyle = inGrid
+            ? 'display:block; max-width:100%; height:auto; margin:0 !important; padding:8px !important; border-radius:14px !important; box-sizing:border-box; box-shadow:0 12px 28px rgba(15,23,42,0.18), 0 2px 8px rgba(15,23,42,0.12); border:1px solid rgba(255,255,255,0.75);'
+            : 'display:block; width:100%; max-width:100%; height:auto; margin:30px auto !important; padding:8px !important; border-radius:14px !important; box-sizing:border-box; box-shadow:0 16px 34px rgba(15,23,42,0.22), 0 4px 10px rgba(15,23,42,0.12); border:1px solid rgba(15,23,42,0.12);';
+        img.setAttribute('style', `${currentStyle}; ${appendedStyle}`);
     });
 
     const container = doc.createElement('div');

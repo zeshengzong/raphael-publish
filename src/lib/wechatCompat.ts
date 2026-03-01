@@ -45,40 +45,43 @@ export async function makeWeChatCompatible(html: string, themeId: string): Promi
         }
     });
 
-    // 2. WeChat ignores flex, let's fix display:flex wrappers by reverting them to standard inline-blocks or tables.
-    // Specially target the flex containers (e.g. gap/images)
-    const divs = section.querySelectorAll('div');
-    divs.forEach(div => {
-        const style = div.getAttribute('style') || '';
-        if (style.includes('display: flex') || style.includes('display:flex')) {
-            // Replace flex with table-like structure for perfect WeChat side-by-side rendering
-            const flexChildren = Array.from(div.children);
-            if (flexChildren.every(child => child.tagName === 'IMG' || child.querySelector('img'))) {
-                const table = doc.createElement('table');
-                table.setAttribute('style', 'width: 100%; border-collapse: collapse; margin: 16px 0; border: none !important;');
-                const tbody = doc.createElement('tbody');
-                const tr = doc.createElement('tr');
-                tr.setAttribute('style', 'border: none !important; background: transparent !important;');
+    // 2. WeChat ignores flex in many scenarios. Convert image flex wrappers to table layout.
+    const flexLikeNodes = section.querySelectorAll('div, p.image-grid');
+    flexLikeNodes.forEach(node => {
+        // Keep code block internals untouched.
+        if (node.closest('pre, code')) return;
 
-                flexChildren.forEach(child => {
-                    const td = doc.createElement('td');
-                    td.setAttribute('style', 'padding: 0 4px; vertical-align: top; border: none !important; background: transparent !important;');
-                    td.appendChild(child);
-                    // Update child width to 100% since it's now bound by TD
-                    if (child.tagName === 'IMG') {
-                        const currentStyle = child.getAttribute('style') || '';
-                        child.setAttribute('style', currentStyle.replace(/width:\s*[^;]+;?/g, '') + ' width: 100% !important; display: block; margin: 0 auto;');
-                    }
-                    tr.appendChild(td);
-                });
+        const style = node.getAttribute('style') || '';
+        const isFlexNode = style.includes('display: flex') || style.includes('display:flex');
+        const isImageGrid = node.classList.contains('image-grid');
+        if (!isFlexNode && !isImageGrid) return;
 
-                tbody.appendChild(tr);
-                table.appendChild(tbody);
-                div.parentNode?.replaceChild(table, div);
-            } else {
-                // Non-image flex items just get stripped of flex
-                div.setAttribute('style', style.replace(/display:\s*flex;?/g, 'display: block;'));
-            }
+        const flexChildren = Array.from(node.children);
+        if (flexChildren.every(child => child.tagName === 'IMG' || child.querySelector('img'))) {
+            const table = doc.createElement('table');
+            table.setAttribute('style', 'width: 100%; border-collapse: collapse; margin: 16px 0; border: none !important;');
+            const tbody = doc.createElement('tbody');
+            const tr = doc.createElement('tr');
+            tr.setAttribute('style', 'border: none !important; background: transparent !important;');
+
+            flexChildren.forEach(child => {
+                const td = doc.createElement('td');
+                td.setAttribute('style', 'padding: 0 4px; vertical-align: top; border: none !important; background: transparent !important;');
+                td.appendChild(child);
+                // Update child width to 100% since it's now bound by TD
+                if (child.tagName === 'IMG') {
+                    const currentStyle = child.getAttribute('style') || '';
+                    child.setAttribute('style', currentStyle.replace(/width:\s*[^;]+;?/g, '') + ' width: 100% !important; display: block; margin: 0 auto;');
+                }
+                tr.appendChild(td);
+            });
+
+            tbody.appendChild(tr);
+            table.appendChild(tbody);
+            node.parentNode?.replaceChild(table, node);
+        } else if (isFlexNode) {
+            // Non-image flex items just get stripped of flex.
+            node.setAttribute('style', style.replace(/display:\s*flex;?/g, 'display: block;'));
         }
     });
 
@@ -115,6 +118,9 @@ export async function makeWeChatCompatible(html: string, themeId: string): Promi
     // We only enforce on specific text tags that WeChat likes to hijack
     const textNodes = section.querySelectorAll('p, li, h1, h2, h3, h4, h5, h6, blockquote, span');
     textNodes.forEach(node => {
+        // Preserve code highlighting tokens inside code blocks.
+        if (node.tagName === 'SPAN' && node.closest('pre, code')) return;
+
         let currentStyle = node.getAttribute('style') || '';
 
         if (fontMatch && !currentStyle.includes('font-family:')) {
@@ -134,6 +140,26 @@ export async function makeWeChatCompatible(html: string, themeId: string): Promi
         node.setAttribute('style', currentStyle.trim());
     });
 
+    // Keep CJK punctuation attached to preceding inline emphasis in WeChat.
+    // Example: <strong>标题</strong>：说明 -> <strong>标题：</strong>说明
+    const inlineNodes = section.querySelectorAll('strong, b, em, span, a, code');
+    inlineNodes.forEach(node => {
+        const next = node.nextSibling;
+        if (!next || next.nodeType !== Node.TEXT_NODE) return;
+        const text = next.textContent || '';
+        const match = text.match(/^\s*([：；，。！？、:])(.*)$/s);
+        if (!match) return;
+
+        const punct = match[1];
+        const rest = match[2] || '';
+        node.appendChild(doc.createTextNode(punct));
+        if (rest) {
+            next.textContent = rest;
+        } else {
+            next.parentNode?.removeChild(next);
+        }
+    });
+
     // 5. Convert all images to Base64 for safe WeChat pasting
     const imgs = Array.from(section.querySelectorAll('img'));
     await Promise.all(imgs.map(async img => {
@@ -147,5 +173,10 @@ export async function makeWeChatCompatible(html: string, themeId: string): Promi
     doc.body.innerHTML = '';
     doc.body.appendChild(section);
 
-    return doc.body.innerHTML;
+    // Prevent WeChat from breaking lines between inline emphasis and leading CJK punctuation.
+    // Example: </strong>： should stay on the same line.
+    let outputHtml = doc.body.innerHTML;
+    outputHtml = outputHtml.replace(/(<\/(?:strong|b|em|span|a|code)>)\s*([：；，。！？、])/g, '$1\u2060$2');
+
+    return outputHtml;
 }
