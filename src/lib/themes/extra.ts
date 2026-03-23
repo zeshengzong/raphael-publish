@@ -6,7 +6,7 @@ export const extraThemes: Theme[] = [
     name: 'Solarized',
     description: '经典暖色调开发者配色，柔和护眼的阅读体验',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #657b83 !important; background-color: #fdf6e3 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #657b83 !important; background-color: #fdf6e3 !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #cb4b16 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em;',
       h2: 'font-size: 26px; font-weight: 600; color: #268bd2 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #2aa198 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -34,7 +34,7 @@ export const extraThemes: Theme[] = [
     name: 'Cyberpunk',
     description: '霓虹闪烁的赛博朋克世界，品红与青的极致碰撞',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: "SF Mono", "Fira Code", Consolas, monospace; font-size: 15px; line-height: 1.7 !important; color: #e0e0ff !important; background-color: #0d0221 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: "SF Mono", "Fira Code", Consolas, monospace; font-size: 15px; line-height: 1.7 !important; color: #e0e0ff !important; background-color: #0d0221 !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #ff2a6d !important; text-shadow: 0 0 8px rgba(255,42,109,0.5); line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: 0.05em; text-transform: uppercase;',
       h2: 'font-size: 26px; font-weight: 600; color: #05d9e8 !important; text-shadow: 0 0 8px rgba(5,217,232,0.5); line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #d1f7ff !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -62,7 +62,7 @@ export const extraThemes: Theme[] = [
     name: '水墨',
     description: '纯粹的黑白水墨风，零色彩干扰的极简阅读',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; line-height: 1.8 !important; color: #111111 !important; background-color: #ffffff !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; line-height: 1.8 !important; color: #111111 !important; background-color: #ffffff !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #000000 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.02em; border-bottom: 2px solid #000; padding-bottom: 10px;',
       h2: 'font-size: 26px; font-weight: 700; color: #000000 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #222222 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -90,7 +90,7 @@ export const extraThemes: Theme[] = [
     name: '薰衣草',
     description: '梦幻紫色调的浪漫氛围，诗意与灵感的温柔表达',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.75 !important; color: #3d3155 !important; background-color: #f5f0ff !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.75 !important; color: #3d3155 !important; background-color: #f5f0ff !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #6b4c9a !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em;',
       h2: 'font-size: 26px; font-weight: 600; color: #7c5cad !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #3d3155 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -118,7 +118,7 @@ export const extraThemes: Theme[] = [
     name: '密林',
     description: '深邃的暗绿色丛林，自然与神秘感的沉浸式叙事',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #c8dcc8 !important; background-color: #1a2e1a !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #c8dcc8 !important; background-color: #1a2e1a !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #7dce82 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em;',
       h2: 'font-size: 26px; font-weight: 600; color: #a8d8a8 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #8fbc8f !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -146,7 +146,7 @@ export const extraThemes: Theme[] = [
     name: '冰川',
     description: '清冽的冰蓝色调，冷静理性的科技分析与报告',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #2c3e50 !important; background-color: #eef4fa !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #2c3e50 !important; background-color: #eef4fa !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #1565c0 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em;',
       h2: 'font-size: 26px; font-weight: 600; color: #1976d2 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #2c3e50 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -174,7 +174,7 @@ export const extraThemes: Theme[] = [
     name: '咖啡',
     description: '醇厚巧克力棕色调，午后咖啡馆的温暖书卷气',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; line-height: 1.75 !important; color: #3e2723 !important; background-color: #f5efe6 !important; background-image: radial-gradient(circle at center, #f5efe6 0%, #ebe2d3 100%); word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; line-height: 1.75 !important; color: #3e2723 !important; background-color: #f5efe6 !important; background-image: radial-gradient(circle at center, #f5efe6 0%, #ebe2d3 100%); word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #4e342e !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em;',
       h2: 'font-size: 26px; font-weight: 600; color: #5d4037 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #3e2723 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -202,7 +202,7 @@ export const extraThemes: Theme[] = [
     name: 'Bauhaus',
     description: '包豪斯三原色风格，红蓝黄碰撞的现代主义先锋',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.65 !important; color: #1a1a1a !important; background-color: #ffffff !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.65 !important; color: #1a1a1a !important; background-color: #ffffff !important; word-wrap: break-word;',
       h1: 'font-size: 34px; font-weight: 900; color: #e30613 !important; line-height: 1.2 !important; margin: 38px 0 16px; letter-spacing: -0.02em; text-transform: uppercase;',
       h2: 'font-size: 26px; font-weight: 700; color: #004d9f !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #1a1a1a !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -230,7 +230,7 @@ export const extraThemes: Theme[] = [
     name: '赤铜',
     description: '暗夜中的青铜古韵，深沉温暖的金属质感暗色调',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; line-height: 1.7 !important; color: #d4b896 !important; background-color: #1c1410 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; line-height: 1.7 !important; color: #d4b896 !important; background-color: #1c1410 !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #e8a87c !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em;',
       h2: 'font-size: 26px; font-weight: 600; color: #c49070 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #d4b896 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -258,7 +258,7 @@ export const extraThemes: Theme[] = [
     name: '彩虹糖',
     description: '多彩柔和的马卡龙色系，活泼甜美的少年感表达',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.75 !important; color: #4a4a5a !important; background-color: #fefcf8 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.75 !important; color: #4a4a5a !important; background-color: #fefcf8 !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #e07a94 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em;',
       h2: 'font-size: 26px; font-weight: 600; color: #7ab8d0 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #85b882 !important; line-height: 1.4 !important; margin: 28px 0 14px;',

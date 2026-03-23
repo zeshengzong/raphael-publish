@@ -6,7 +6,7 @@ export const classicThemes: Theme[] = [
     name: 'Mac',
     description: '纯净现代的极致留白，适合日常记录的万能首选',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #1d1d1f !important; background-color: #ffffff !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #1d1d1f !important; background-color: #ffffff !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #111 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em; ',
       h2: 'font-size: 26px; font-weight: 600; color: #111 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #1d1d1f !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -34,7 +34,7 @@ export const classicThemes: Theme[] = [
     name: 'Claude',
     description: '温润的燕麦卡其色底，适合深度长文或文学哲思',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #2b2b2b !important; background-color: #f8f6f0 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #2b2b2b !important; background-color: #f8f6f0 !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #b75c3d !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em; ',
       h2: 'font-size: 26px; font-weight: 600; color: #b75c3d !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #2b2b2b !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -62,7 +62,7 @@ export const classicThemes: Theme[] = [
     name: '微信公众号原生',
     description: '原汁原味的官方绿底纹，满足传统阅读习惯的稳妥之选',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #333333 !important; background-color: #ffffff !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #333333 !important; background-color: #ffffff !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #111 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em; ',
       h2: 'font-size: 26px; font-weight: 600; color: #111 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #333333 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -90,7 +90,7 @@ export const classicThemes: Theme[] = [
     name: 'NYT',
     description: '经典米黄色新闻纸，极强的严肃深度报道专业感',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; line-height: 1.7 !important; color: #000000 !important; background-color: #fdfaf6 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; line-height: 1.7 !important; color: #000000 !important; background-color: #fdfaf6 !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #111 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em; border-bottom: 2px solid #000; padding-bottom:12px;',
       h2: 'font-size: 26px; font-weight: 700; color: #111 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #000000 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -118,7 +118,7 @@ export const classicThemes: Theme[] = [
     name: 'Medium',
     description: '简约柔和的西式博客排版，适合生活志与随笔沉淀',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.85 !important; color: #242424 !important; background-color: #fcfcfc !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.85 !important; color: #242424 !important; background-color: #fcfcfc !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #111 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em; ',
       h2: 'font-size: 26px; font-weight: 600; color: #111 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #242424 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -146,7 +146,7 @@ export const classicThemes: Theme[] = [
     name: 'Stripe',
     description: '前沿的硅谷极客商务风，高悬浮感与高亮视觉系',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #425466 !important; background-color: #f6f9fc !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #425466 !important; background-color: #f6f9fc !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #111 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em; ',
       h2: 'font-size: 26px; font-weight: 600; color: #111 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #425466 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -174,7 +174,7 @@ export const classicThemes: Theme[] = [
     name: '飞书效率',
     description: '沉稳严谨的深蓝配色，适合职场效率与管理方法论',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #1f2329 !important; background-color: #f7f8fa !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #1f2329 !important; background-color: #f7f8fa !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #111 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em; ',
       h2: 'font-size: 26px; font-weight: 600; color: #111 !important; line-height: 1.35 !important; margin: 32px 0 16px; border-bottom: 2px solid #3370ff; padding-bottom: 8px;',
       h3: 'font-size: 21px; font-weight: 600; color: #1f2329 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -202,7 +202,7 @@ export const classicThemes: Theme[] = [
     name: 'Linear',
     description: '纯正的暗夜赛博极客风，编程教程与开发日志的终极归宿',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #f1f1f2 !important; background-color: #101114 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #f1f1f2 !important; background-color: #101114 !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #fff !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em; ',
       h2: 'font-size: 26px; font-weight: 600; color: #eee !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #ddd !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -230,7 +230,7 @@ export const classicThemes: Theme[] = [
     name: 'Retro',
     description: '做旧羊皮纸搭配火漆红，适合人文历史与艺术鉴赏',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; line-height: 1.7 !important; color: #2b2621 !important; background-color: #f4ecd8 !important; background-image: radial-gradient(circle at center, #f4ecd8 0%, #ebdec4 100%); word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; line-height: 1.7 !important; color: #2b2621 !important; background-color: #f4ecd8 !important; background-image: radial-gradient(circle at center, #f4ecd8 0%, #ebdec4 100%); word-wrap: break-word;',
       h1: 'font-size: 36px; font-weight: 800; color: #2b2621 !important; line-height: 1.2 !important; margin: 38px 0 20px; letter-spacing: -0.02em; font-variant: small-caps;',
       h2: 'font-size: 26px; font-weight: 700; color: #8c2211 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #2b2621 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -258,7 +258,7 @@ export const classicThemes: Theme[] = [
     name: 'Bloomberg',
     description: '还原华尔街古老金融终端机，硬派科技代码展示专属',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: "SF Mono", "Courier New", Courier, monospace; font-size: 16px; line-height: 1.7 !important; color: #15fa52 !important; background-color: #000000 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: "SF Mono", "Courier New", Courier, monospace; font-size: 16px; line-height: 1.7 !important; color: #15fa52 !important; background-color: #000000 !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #fff !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em; ',
       h2: 'font-size: 26px; font-weight: 600; color: #eee !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #ddd !important; line-height: 1.4 !important; margin: 28px 0 14px;',

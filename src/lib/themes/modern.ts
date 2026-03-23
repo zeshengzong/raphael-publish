@@ -6,7 +6,7 @@ export const modernThemes: Theme[] = [
     name: 'Notion',
     description: '极致克制的黑白灰，纯粹信息密度与无干扰写作',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.6 !important; color: #37352f !important; background-color: #ffffff !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.6 !important; color: #37352f !important; background-color: #ffffff !important; word-wrap: break-word;',
       h1: 'font-size: 34px; font-weight: 700; color: #37352f !important; line-height: 1.2 !important; margin: 38px 0 8px; letter-spacing: -0.02em;',
       h2: 'font-size: 26px; font-weight: 600; color: #37352f !important; line-height: 1.3 !important; margin: 32px 0 8px;',
       h3: 'font-size: 21px; font-weight: 600; color: #37352f !important; line-height: 1.35 !important; margin: 28px 0 8px;',
@@ -34,7 +34,7 @@ export const modernThemes: Theme[] = [
     name: 'GitHub',
     description: '开发者最熟悉的阅读界面，README 即视感',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6 !important; color: #1f2328 !important; background-color: #ffffff !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6 !important; color: #1f2328 !important; background-color: #ffffff !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 600; color: #1f2328 !important; line-height: 1.25 !important; margin: 24px 0 16px; padding-bottom: 10px; border-bottom: 1px solid #d1d9e0;',
       h2: 'font-size: 24px; font-weight: 600; color: #1f2328 !important; line-height: 1.25 !important; margin: 24px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #d1d9e0;',
       h3: 'font-size: 20px; font-weight: 600; color: #1f2328 !important; line-height: 1.25 !important; margin: 24px 0 16px;',
@@ -62,7 +62,7 @@ export const modernThemes: Theme[] = [
     name: '少数派',
     description: '中文数字媒体标杆，经典红色标识与精致排版',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.8 !important; color: #333333 !important; background-color: #ffffff !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.8 !important; color: #333333 !important; background-color: #ffffff !important; word-wrap: break-word;',
       h1: 'font-size: 28px; font-weight: 700; color: #d71a1b !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.01em;',
       h2: 'font-size: 22px; font-weight: 700; color: #333333 !important; line-height: 1.35 !important; margin: 32px 0 14px; padding-left: 12px; border-left: 4px solid #d71a1b;',
       h3: 'font-size: 18px; font-weight: 600; color: #333333 !important; line-height: 1.4 !important; margin: 28px 0 12px;',
@@ -90,7 +90,7 @@ export const modernThemes: Theme[] = [
     name: 'Dracula',
     description: '暗紫色赛博吸血鬼美学，粉青撞色的视觉冲击',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #f8f8f2 !important; background-color: #282a36 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #f8f8f2 !important; background-color: #282a36 !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #bd93f9 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em;',
       h2: 'font-size: 26px; font-weight: 600; color: #ff79c6 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #8be9fd !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -118,7 +118,7 @@ export const modernThemes: Theme[] = [
     name: 'Nord',
     description: '北欧极地冰霜蓝，冷静克制的极光美学',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #d8dee9 !important; background-color: #2e3440 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #d8dee9 !important; background-color: #2e3440 !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #88c0d0 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em;',
       h2: 'font-size: 26px; font-weight: 600; color: #81a1c1 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #88c0d0 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -146,7 +146,7 @@ export const modernThemes: Theme[] = [
     name: '樱花',
     description: '柔粉色系日式美学，温柔感性的少女心表达',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.75 !important; color: #4a3f4f !important; background-color: #fef7f9 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.75 !important; color: #4a3f4f !important; background-color: #fef7f9 !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #c44569 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em;',
       h2: 'font-size: 26px; font-weight: 600; color: #c44569 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #4a3f4f !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -174,7 +174,7 @@ export const modernThemes: Theme[] = [
     name: '深海',
     description: '午夜深蓝配珊瑚橘，沉浸式的海洋系叙事感',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #c8d6e5 !important; background-color: #0c2233 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #c8d6e5 !important; background-color: #0c2233 !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #ff6b6b !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em;',
       h2: 'font-size: 26px; font-weight: 600; color: #feca57 !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #54a0ff !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -202,7 +202,7 @@ export const modernThemes: Theme[] = [
     name: '薄荷',
     description: '清凉薄荷绿底色，适合生活方式与健康类内容',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #2d4a3e !important; background-color: #f0faf5 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7 !important; color: #2d4a3e !important; background-color: #f0faf5 !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #1a7a5a !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em;',
       h2: 'font-size: 26px; font-weight: 600; color: #1a7a5a !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #2d4a3e !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -230,7 +230,7 @@ export const modernThemes: Theme[] = [
     name: '日落',
     description: '暖琥珀色调的黄昏意境，散文游记与情感表达',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; line-height: 1.8 !important; color: #3d2c1e !important; background-color: #fdf6ee !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; line-height: 1.8 !important; color: #3d2c1e !important; background-color: #fdf6ee !important; word-wrap: break-word;',
       h1: 'font-size: 32px; font-weight: 700; color: #c0582a !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.015em;',
       h2: 'font-size: 26px; font-weight: 600; color: #c0582a !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 21px; font-weight: 600; color: #3d2c1e !important; line-height: 1.4 !important; margin: 28px 0 14px;',
@@ -258,7 +258,7 @@ export const modernThemes: Theme[] = [
     name: 'Monokai',
     description: '经典代码编辑器配色，程序员的终极浪漫',
     styles: {
-      container: 'max-width: 100%; margin: 0 auto; padding: 24px 20px 48px 20px; font-family: "SF Mono", "Fira Code", Consolas, monospace; font-size: 15px; line-height: 1.7 !important; color: #f8f8f2 !important; background-color: #272822 !important; word-wrap: break-word;',
+      container: 'max-width: 100%; margin: 0 auto; padding: 24px 6px 48px 6px; font-family: "SF Mono", "Fira Code", Consolas, monospace; font-size: 15px; line-height: 1.7 !important; color: #f8f8f2 !important; background-color: #272822 !important; word-wrap: break-word;',
       h1: 'font-size: 30px; font-weight: 700; color: #f92672 !important; line-height: 1.3 !important; margin: 38px 0 16px; letter-spacing: -0.01em;',
       h2: 'font-size: 24px; font-weight: 600; color: #a6e22e !important; line-height: 1.35 !important; margin: 32px 0 16px;',
       h3: 'font-size: 20px; font-weight: 600; color: #e6db74 !important; line-height: 1.4 !important; margin: 28px 0 14px;',
